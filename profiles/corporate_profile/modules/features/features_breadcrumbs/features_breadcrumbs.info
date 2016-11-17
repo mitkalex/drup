@@ -1,0 +1,39 @@
+name = features_breadcrumbs
+core = 7.x
+package = Features
+dependencies[] = custom_breadcrumbs
+dependencies[] = custom_breadcrumbs_features
+features[ctools][] = strongarm:strongarm:1
+features[custom_breadcrumb][] = portfolio_breadcrumbs
+features[features_api][] = api:2
+features_exclude[node][portfolio_project] = portfolio_project
+features_exclude[dependencies][image] = image
+features_exclude[dependencies][strongarm] = strongarm
+features_exclude[dependencies][taxonomy] = taxonomy
+features_exclude[field_base][body] = body
+features_exclude[field_base][field_image] = field_image
+features_exclude[field_base][field_category] = field_category
+features_exclude[field_instance][node-portfolio_project-body] = node-portfolio_project-body
+features_exclude[field_instance][node-portfolio_project-field_category] = node-portfolio_project-field_category
+features_exclude[field_instance][node-portfolio_project-field_image] = node-portfolio_project-field_image
+features_exclude[variable][comment_anonymous_portfolio_project] = comment_anonymous_portfolio_project
+features_exclude[variable][comment_default_mode_portfolio_project] = comment_default_mode_portfolio_project
+features_exclude[variable][comment_default_per_page_portfolio_project] = comment_default_per_page_portfolio_project
+features_exclude[variable][comment_form_location_portfolio_project] = comment_form_location_portfolio_project
+features_exclude[variable][comment_portfolio_project] = comment_portfolio_project
+features_exclude[variable][comment_preview_portfolio_project] = comment_preview_portfolio_project
+features_exclude[variable][comment_subject_field_portfolio_project] = comment_subject_field_portfolio_project
+features_exclude[variable][field_bundle_settings_node__portfolio_project] = field_bundle_settings_node__portfolio_project
+features_exclude[variable][menu_options_portfolio_project] = menu_options_portfolio_project
+features_exclude[variable][menu_parent_portfolio_project] = menu_parent_portfolio_project
+features_exclude[variable][node_options_portfolio_project] = node_options_portfolio_project
+features_exclude[variable][node_preview_portfolio_project] = node_preview_portfolio_project
+features_exclude[variable][node_submitted_portfolio_project] = node_submitted_portfolio_project
+features_exclude[taxonomy][portfolio_categories] = portfolio_categories
+
+; Information added by Drupal.org packaging script on 2015-07-25
+version = "7.x-1.2"
+core = "7.x"
+project = "corporate_profile"
+datestamp = "1437792841"
+

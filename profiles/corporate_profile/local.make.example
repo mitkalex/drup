@@ -1,0 +1,38 @@
+; corporate_profile make file for local development
+core = "7.x"
+api = "2"
+
+projects[drupal][version] = "7.x"
+; include the d.o. profile base
+includes[] = "drupal-org.make"
+
+; +++++ Libraries +++++
+
+; owl-carousel
+libraries[owl-carousel][directory_name] = "owl-carousel"
+libraries[owl-carousel][type] = "library"
+libraries[owl-carousel][destination] = "libraries"
+libraries[owl-carousel][download][type] = "get"
+libraries[owl-carousel][download][url] = "" ; TODO add download URI
+
+; json2
+libraries[json2][directory_name] = "json2"
+libraries[json2][type] = "library"
+libraries[json2][destination] = "libraries"
+libraries[json2][download][type] = "get"
+libraries[json2][download][url] = "" ; TODO add download URI
+
+; jquery.cycle
+libraries[jquery.cycle][directory_name] = "jquery.cycle"
+libraries[jquery.cycle][type] = "library"
+libraries[jquery.cycle][destination] = "libraries"
+libraries[jquery.cycle][download][type] = "get"
+libraries[jquery.cycle][download][url] = "" ; TODO add download URI
+
+; corporate_profile
+libraries[corporate_profile][directory_name] = "corporate_profile"
+libraries[corporate_profile][type] = "profile"
+libraries[corporate_profile][destination] = "../../profiles"
+libraries[corporate_profile][download][type] = "get"
+libraries[corporate_profile][download][url] = "http://ftp.drupal.org/files/projects/corporate_profile-7.x-1.x-dev.tar.gz"
+

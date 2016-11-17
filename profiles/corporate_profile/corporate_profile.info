@@ -1,0 +1,117 @@
+name = Corporate profile
+description = "Corporate Profile. Created by ADCI Solutions."
+exclusive = "0"
+core = "7.x"
+; ----------
+; Dependencies
+; ----------
+; Administration
+dependencies[] = admin_menu
+dependencies[] = module_filter
+; Chaos tool suite
+dependencies[] = ctools
+dependencies[] = views_content
+; Context
+dependencies[] = context
+dependencies[] = context_layouts
+dependencies[] = context_ui
+; Core
+dependencies[] = block
+dependencies[] = blog
+dependencies[] = color
+dependencies[] = comment
+dependencies[] = contextual
+dependencies[] = dashboard
+dependencies[] = dblog
+dependencies[] = field
+dependencies[] = field_sql_storage
+dependencies[] = field_ui
+dependencies[] = file
+dependencies[] = filter
+dependencies[] = help
+dependencies[] = image
+dependencies[] = list
+dependencies[] = menu
+dependencies[] = node
+dependencies[] = number
+dependencies[] = options
+dependencies[] = path
+dependencies[] = rdf
+dependencies[] = search
+dependencies[] = shortcut
+dependencies[] = system
+dependencies[] = strongarm
+dependencies[] = taxonomy
+dependencies[] = text
+dependencies[] = update
+dependencies[] = user
+; Custom breadcrumbs
+dependencies[] = custom_breadcrumbs
+dependencies[] = custom_breadcrumbs_identifiers
+dependencies[] = custom_breadcrumbs_paths
+dependencies[] = custom_breadcrumbs_views
+dependencies[] = custom_breadcrumbsapi
+; Features extra
+dependencies[] = fe_block
+; FlexSlider
+dependencies[] = flexslider
+dependencies[] = flexslider_fields
+dependencies[] = flexslider_views
+dependencies[] = flexslider_views_slideshow
+; Node export
+dependencies[] = node_export
+dependencies[] = node_export_dependency
+dependencies[] = node_export_features
+; Other
+dependencies[] = backup_migrate
+dependencies[] = block_class
+dependencies[] = breakpoints
+dependencies[] = entity
+dependencies[] = entity_token
+dependencies[] = libraries
+dependencies[] = logintoboggan
+dependencies[] = token
+; Owl Carousel
+dependencies[] = owlcarousel
+dependencies[] = owlcarousel_fields
+dependencies[] = owlcarousel_ui
+dependencies[] = owlcarousel_views
+; Picture
+dependencies[] = picture
+; Theme Tools
+dependencies[] = delta
+dependencies[] = delta_blocks
+dependencies[] = delta_color
+dependencies[] = delta_ui
+; UUID
+dependencies[] = uuid
+dependencies[] = uuid_path
+; User interface
+dependencies[] = jquery_update
+dependencies[] = superfish
+; Variable
+dependencies[] = variable
+; Views
+dependencies[] = views
+dependencies[] = views_slideshow
+dependencies[] = views_slideshow_cycle
+dependencies[] = views_ui
+; Webform
+dependencies[] = webform
+; Features
+dependencies[] = features
+dependencies[] = uuid_features
+dependencies[] = variable_settings
+dependencies[] = features_pathauto
+dependencies[] = node_exp
+dependencies[] = views_f
+dependencies[] = menus
+dependencies[] = corponly
+dependencies[] = features_breadcrumbs
+
+; Information added by Drupal.org packaging script on 2015-07-25
+version = "7.x-1.2"
+core = "7.x"
+project = "corporate_profile"
+datestamp = "1437792841"
+

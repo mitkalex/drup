@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the node_exp feature.
+ */
+
+include_once 'node_exp.features.inc';

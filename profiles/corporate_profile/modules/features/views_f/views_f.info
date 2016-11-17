@@ -1,0 +1,31 @@
+name = views_f
+core = 7.x
+package = Features
+dependencies[] = owlcarousel_views
+dependencies[] = views
+dependencies[] = views_slideshow
+features[ctools][] = views:views_default:3.0
+features[features_api][] = api:2
+features[views_view][] = blog_page_view
+features[views_view][] = blog_post_published_date
+features[views_view][] = categories
+features[views_view][] = front_carousel
+features[views_view][] = home_page_partners
+features[views_view][] = home_page_slideshow
+features[views_view][] = partners_carousel
+features[views_view][] = portfolio_categories
+features[views_view][] = portfolio_page
+features[views_view][] = recent_articles
+features[views_view][] = recent_blog_posts
+features[views_view][] = recent_portfolio_items
+features[views_view][] = tags
+features[views_view][] = teset
+features[views_view][] = testimonials
+features_exclude[dependencies][ctools] = ctools
+
+; Information added by Drupal.org packaging script on 2015-07-25
+version = "7.x-1.2"
+core = "7.x"
+project = "corporate_profile"
+datestamp = "1437792841"
+

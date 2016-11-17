@@ -1,0 +1,32 @@
+name = Features pathauto
+core = 7.x
+package = Features
+dependencies[] = ctools
+dependencies[] = pathauto
+dependencies[] = strongarm
+features[ctools][] = strongarm:strongarm:1
+features[features_api][] = api:2
+features[variable][] = pathauto_blog_pattern
+features[variable][] = pathauto_forum_pattern
+features[variable][] = pathauto_node_article_pattern
+features[variable][] = pathauto_node_blog_pattern
+features[variable][] = pathauto_node_page_pattern
+features[variable][] = pathauto_node_part_pattern
+features[variable][] = pathauto_node_pattern
+features[variable][] = pathauto_node_portfolio_project_pattern
+features[variable][] = pathauto_node_slideshow_item_pattern
+features[variable][] = pathauto_node_testimonial_pattern
+features[variable][] = pathauto_node_webform_pattern
+features[variable][] = pathauto_punctuation_hyphen
+features[variable][] = pathauto_taxonomy_term_blog_categories_pattern
+features[variable][] = pathauto_taxonomy_term_pattern
+features[variable][] = pathauto_taxonomy_term_portfolio_categories_pattern
+features[variable][] = pathauto_taxonomy_term_tags_pattern
+features[variable][] = pathauto_user_pattern
+
+; Information added by Drupal.org packaging script on 2015-07-25
+version = "7.x-1.2"
+core = "7.x"
+project = "corporate_profile"
+datestamp = "1437792841"
+

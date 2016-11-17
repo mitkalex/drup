@@ -1,0 +1,136 @@
+/* Menu toggle is using the media queries from the standard, tablet and smalltouch layout settings */
+@media only screen and (max-width:723px) {
+
+  .at-mt .at-menu-toggle-button {
+    position: static;
+    top: 0;
+  }
+  .at-mt .menu-toggle {
+    display: none;
+  }
+  .at-mt .menu-toggle ul li,
+  .at-mt .menu-toggle ul li a {
+    display: block;
+    float:none;
+  }
+  .at-mt .menu-toggle .sf-menu {
+    float: none;
+    margin: 0;
+    height: auto;
+  }
+  .at-mt .menu-toggle .sf-menu ul,
+  .at-mt .menu-toggle .sf-menu li {
+    margin: 0;
+    position: relative;
+    top: 0;
+    display: block;
+    float: none;
+    clear: both;
+    width: 100% !important;
+    left: 0 !important;
+  }
+  .at-mt .menu-toggle .sf-menu ul {
+    left: 0;
+    position: static;
+  }
+  .at-mt .menu-toggle .sf-hidden {
+    display: none !important;
+  }
+}
+@media only screen and (min-width:480px) and (max-width:723px) {
+
+  .at-mt .at-menu-toggle-button {
+    position: static;
+    top: 0;
+  }
+  .at-mt .menu-toggle {
+    display: none;
+  }
+  .at-mt .menu-toggle ul li,
+  .at-mt .menu-toggle ul li a {
+    display: block;
+    float:none;
+  }
+  .at-mt .menu-toggle .sf-menu {
+    float: none;
+    margin: 0;
+    height: auto;
+  }
+  .at-mt .menu-toggle .sf-menu ul,
+  .at-mt .menu-toggle .sf-menu li {
+    margin: 0;
+    position: relative;
+    top: 0;
+    display: block;
+    float: none;
+    clear: both;
+    width: 100% !important;
+    left: 0 !important;
+  }
+  .at-mt .menu-toggle .sf-menu ul {
+    left: 0;
+    position: static;
+  }
+  .at-mt .menu-toggle .sf-hidden {
+    display: none !important;
+  }
+}
+@media only screen and (min-width:724px) and (max-width:999px) {
+
+  .at-mt .at-menu-toggle-button {
+    position: static;
+    top: 0;
+  }
+  .at-mt .menu-toggle {
+    display: none;
+  }
+  .at-mt .menu-toggle ul li,
+  .at-mt .menu-toggle ul li a {
+    display: block;
+    float:none;
+  }
+  .at-mt .menu-toggle .sf-menu {
+    float: none;
+    margin: 0;
+    height: auto;
+  }
+  .at-mt .menu-toggle .sf-menu ul,
+  .at-mt .menu-toggle .sf-menu li {
+    margin: 0;
+    position: relative;
+    top: 0;
+    display: block;
+    float: none;
+    clear: both;
+    width: 100% !important;
+    left: 0 !important;
+  }
+  .at-mt .menu-toggle .sf-menu ul {
+    left: 0;
+    position: static;
+  }
+  .at-mt .menu-toggle .sf-hidden {
+    display: none !important;
+  }
+}
+@media only screen and (min-width:999px) and (max-width:999px) {
+
+  .at-mt .at-menu-toggle-button {
+    position: absolute;
+    top: -99999em;
+  }
+  .at-mt .menu-toggle {
+    display:block !important;
+  }
+}
+@media only screen and (min-width:1000px) {
+
+  .at-mt .at-menu-toggle-button {
+    position: absolute;
+    top: -99999em;
+  }
+  .at-mt .menu-toggle {
+    display:block !important;
+  }
+}
+.at-mt .at-menu-toggle div.contextual-links-wrapper ul.contextual-links{display:none}

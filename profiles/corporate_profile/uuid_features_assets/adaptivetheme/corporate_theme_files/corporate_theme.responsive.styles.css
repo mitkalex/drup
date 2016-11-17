@@ -1,0 +1,1631 @@
+/*
+ * responsive.custom.css is for custom media queries that are not set via the
+ * theme settings, such as cascading media queries.
+ *
+ * By default all the other responsive stylesheets used in Adaptivetheme use a
+ * "stacking method", however cascading media queries use a waterfall method so
+ * you can leverage the cascade and inheritance for all browsers that support
+ * media queries.
+ *
+ * @SEE http://zomigi.com/blog/essential-considerations-for-crafting-quality-media-queries/#mq-overlap-stack
+ *
+ * NOTE: this file loads by default, to disable go to your theme settings and
+ * look under the "CSS" settings tab.
+ */
+
+/*
+ * Really small screens and up
+ */
+/* @media only screen and (min-width: 220px) {} */
+
+/*
+ * Smalltouch sizes and up
+ */
+/* @media only screen and (min-width: 320px) {} */
+
+/*
+ * Smalltouch sizes and down
+ */
+@media only screen and (max-width: 480px) {
+  /* 
+   * Float Region Blocks - custom media query CSS example:
+   * 
+   * Float regions blocks is an Extension you can enable in the appearance
+   * settings for your theme. This feature allows you to automatically float
+   * blocks in regions, you can switch it on and off depending on your
+   * requirements. For design purposes you many want to remove the floats for
+   * devices where the entire theme is just one column - for example small
+   * mobile phones. The following CSS is inside the custom media query:
+   *
+   *   @media only screen and (max-width: 480px){}
+   *
+   * This will target devices with a maximum width of 480px - most small phones.
+   * In these smaller screen sizes we can remove the float and widths so all
+   * blocks stack instead of displaying horizonally. The selector used is an
+   * "attribute selector" which will match on any float block class. Use your
+   * inspector or Firebug to get the classes from the page output if you need
+   * more granular control over block alignment and stacking.
+   */
+  .region[class*="float-blocks"] .block {
+    float: none;
+    width: 100%;
+  }
+}
+
+/*
+ * Tablet sizes and up
+ */
+/* @media only screen and (min-width: 768px) {} */
+
+/*
+ * Desktops/laptops and up
+ */
+/* @media only screen and (min-width: 1025px) {} */
+
+
+@media only screen and (max-width:723px) {
+f/*
+ *   Important Information about this CSS File
+ *
+ * - Do not delete or rename this file, if you do not use it leave it blank (delete
+ *   everything) and the file will be skipped when you enable Production Mode in
+ *   the Global theme settings.
+ *
+ * - Read the _README file in this directory, it contains useful help and other information.
+ */
+
+/* Increase the default font size on small touch devices */
+body {
+  font-size: 100%;
+  min-width: 320px;
+}
+
+h2 {
+  font-size: 22px;
+}
+
+/* =============================================================================
+ *   Mobile Menu Toggle
+ *   See your theme settings extensions for how to enable the menu toggle.
+ *   These are example styles for the menu toggle menu, you can use these in the
+ *   relevant responsive stylesheets as required. Modify to suit your design.
+ * ========================================================================== */
+/* The toggle link */
+.at-mt .at-menu-toggle h2 {
+  margin-bottom: 5px;
+}
+
+.at-mt .at-menu-toggle h2 a {
+  background: #eee;
+  border: 2px solid #ccc;
+  padding: 9px 30px;
+}
+
+/* Menu items */
+.at-mt .at-menu-toggle ul.menu li a {
+  background: #eee;
+  border-bottom: 1px solid #fff;
+}
+
+#menu-bar {
+  margin-bottom: 0;
+}
+
+header#header .region-header {
+  display: none;
+}
+
+#logo {
+  position: absolute;
+  z-index: 2;
+  top: 4px;
+}
+
+#page {
+  position: relative;
+}
+
+/* MAIN CAROUSEL BLOCK STYLING */
+
+
+#columns #block-views-front-carousel-block,
+.iframe-wrapper, #block-views-testimonials-block  {
+  margin: 0px -20px;
+}
+
+#block-views-front-carousel-block .views-field-nothing {
+  width: 100%;
+  height: 50%;
+  padding: 0;
+  bottom: 0;
+  right: 0;
+}
+
+#block-views-front-carousel-block .views-field-nothing span {
+  position: absolute;
+  top: 13px;
+  left: 24px;
+  width: 90%;
+}
+
+#block-views-front-carousel-block .owl-controls {
+  position: static;
+  margin-left: 15%;
+  margin-right: 15%;
+  width: 70%;
+  text-align: center;
+}
+
+#block-views-front-carousel-block .owl-controls .owl-page {
+  background: rgba(198, 208, 209, 0.4);
+  border-radius: 50%;
+  width: 34px;
+  height: 34px;
+}
+
+#block-views-front-carousel-block .owl-controls .owl-page span {
+  width: 22px;
+  height: 22px;
+  margin: 6px 6px;  
+  background: #fff;
+  opacity: 1;
+}
+
+#block-views-front-carousel-block .owl-controls .owl-page span:hover {
+  background: #fff;
+  opacity: 0.5;
+}
+
+#block-views-front-carousel-block .owl-controls .owl-page.active span {
+  background: #c6d0d1;
+}
+
+#block-views-front-carousel-block .owl-controls .owl-page + .owl-page {
+  margin-left: 25px;
+}
+
+/* HEADER MENU HAMBURGER SELECT STYLING */
+
+#block-superfish-1 select {
+  -webkit-appearance: none;
+  background: none;
+  border: none;
+  width: 20%;
+  float: right;
+  height: 40px;
+  font-size: 0;
+  background: url(/corporate_profile/sites/all/themes/corporate_theme/images/hamburger-mobile.png) no-repeat;
+  background-position-y: center;
+  background-position-x: center;
+}
+
+#block-superfish-1 {
+  border-top: 4px solid #0daed1;
+}
+
+#block-block-5 div.column {
+  display: inline-block;
+  vertical-align: top;
+}
+
+#block-block-5 {
+  margin: 30px 0px;
+}
+
+/* TESTIMONIALS BLOCK STYLING */ 
+
+#block-views-testimonials-block .view {
+  padding: 45px 22px 70px 37px;
+  background-color: #e5f2f5;
+  padding-bottom: 20px;
+  border: 1px solid #b8d7de;
+  border-radius: 3px;
+  border-left: none;
+  border-right: none;
+}
+
+#block-views-testimonials-block .views-row {
+  padding: 15px 20px;
+  background: url(/corporate_profile/sites/all/themes/corporate_theme/images/testimonials_quotes.png) no-repeat;
+}
+
+/* FOOTER STYLING */
+
+footer#footer .region-inner {
+  margin: 0 20px;
+}
+
+footer .block {
+  padding: 17px 0 15px;
+}
+
+footer .block .content {
+  padding-top: 10px;
+}
+
+footer .block a, p {
+  font-size: 16px;
+}
+
+footer#footer .block h2 {
+  font-size: 22px;
+  margin: 0.3em 0;
+}
+
+footer .block + .block {
+  border-top: 8px solid #727272;
+}
+
+#block-block-4 {
+  height: none;
+  box-shadow: none;
+  padding: 20px 0;
+}
+
+#block-block-4 .block-inner {
+  margin: 0 30px;
+}
+
+#block-block-4 #footer-dash {
+  display: none;
+}
+
+
+footer .block-inner {
+  margin: 0;
+}
+
+#superfish-2, #block-views-recent-blog-posts-block .content,
+#block-block-1 .content, #block-block-2 .content {
+  width: 100%;
+}
+
+#block-views-recent-blog-posts-block .field-content {
+  font-size: 14px;
+}
+
+#block-views-recent-blog-posts-block .content img:hover {
+  border-color: #525252;
+}
+
+footer #block-block-2 .content {
+  padding-top: 0;
+}
+
+footer #block-block-2 {
+  padding-bottom: 0;
+}
+
+#block-block-4 .footer-line , #block-block-4 .footer-line a {  
+  font-size: 14px;
+  margin: 0;
+  display: block;
+}
+
+
+#block-block-4 .content {
+  padding: 0;
+}
+
+/* PARTNERS BLOCK CAROUSEL STYLING */
+
+#block-views-partners-carousel-block .owl-item .views-field-field-image {
+  padding: 0;
+}
+
+#block-views-partners-carousel-block .owl-wrapper-outer {
+  margin: 0;
+}
+
+#block-views-partners-carousel-block .owl-item .field-content {
+  margin-right: 12px;  
+}
+
+#columns #block-views-partners-carousel-block {
+  margin: 32px 0px;
+  margin-top: -10px;
+}
+
+#columns #block-views-partners-carousel-block .owl-buttons {
+  display: none;
+}
+
+#block-views-partners-carousel-block h2 {
+  margin-bottom: 10px;
+}
+
+#columns #block-views-partners-carousel-block img {
+  border: 6px solid #ecf3f4;
+  border-radius: 6px;
+}
+
+#block-views-partners-carousel-block .owl-controls .owl-page,
+#block-views-recent-articles-block .owl-controls .owl-page {
+  background: rgba(198, 208, 209, 0.4);
+  border-radius: 50%;
+  width: 19px;
+  height: 19px;
+}
+
+#block-views-partners-carousel-block .owl-controls .owl-page span,
+#block-views-recent-articles-block .owl-controls .owl-page span {
+  width: 13px;
+  height: 13px;
+  margin: 3px 3px;  
+  background: #fff;
+  opacity: 1;
+}
+
+#block-views-partners-carousel-block .owl-controls .owl-page span:hover,
+#block-views-recent-articles-block .owl-controls .owl-page span:hover {
+  background: #fff;
+  opacity: 0.5;
+}
+
+#block-views-partners-carousel-block .owl-controls .owl-page.active span,
+#block-views-recent-articles-block .owl-controls .owl-page.active span {
+  background: #c6d0d1;
+}
+
+#block-views-partners-carousel-block .owl-controls .owl-page + .owl-page,
+#block-views-recent-articles-block .owl-controls .owl-page + .owl-page {
+  margin-left: 9%;
+}
+
+/* RECENT ARTICLES BLOCK STYLING */ 
+
+#columns #block-views-recent-articles-block .views-field-view-node {
+  display: none;
+}
+
+#block-views-recent-articles-block img {
+  border-radius: 6px;
+  width: 100%;
+}
+
+#columns #block-views-recent-articles-block {
+  margin: 0 0px;
+  margin-top: 50px;
+}
+
+
+#block-block-5 div.column {
+  display: block;
+  vertical-align: top;
+  margin: 0 auto;
+}
+
+#block-block-5 div.column ul {
+  padding-left: 0px;
+  text-align: center;
+  clear: left;
+}
+
+#block-block-5 div.column ul li {
+  height: auto;
+  line-height: 22px;
+}
+
+#block-block-5 strong {
+  position: initial;
+  float: left;
+}
+
+#block-block-5 div.column p {
+  line-height: 54px;
+}
+
+iframe {
+  width: 100%;
+  height: 436px;
+}
+
+#node-142 .contact-column {
+  width: 100%;
+}
+
+.contact-column ul li, .contact-column strong, form label, #block-webform-client-block-131 input[type=submit] {
+  font-size: 16px; 
+  font-weight: 400;
+  line-height: 24px;  
+}
+
+.contact-column ul {
+  margin: 0.1em 0;
+}
+
+#main-content {
+  border-top: 1px solid #c6d0d1;
+}  
+
+#content .form-actions {
+  margin-bottom: 0;
+}
+
+#content .form-actions input[type=submit] {
+  float: right;
+  padding: 6px 20px;
+}
+
+#block-webform-client-block-131 {
+  padding-bottom: 70px;
+  border-bottom: 1px solid #c6d0d1; 
+}
+
+#node-142 h2 {
+  margin: 25px 0 10px 0;
+  clear: both;  
+}
+
+#node-142 h2.block-title {
+  margin-bottom: 20px;
+}
+
+.region-sidebar-first,
+.region-sidebar-second {
+  box-shadow: none;
+}
+
+#columns .region-sidebar-first section,
+#columns .region-sidebar-second section {
+  margin: 0;
+  width: initial;
+  border-top: 1px solid #c6d0d1;
+}
+
+#block-system-main #node-140.node-page {
+  margin: 0;
+}
+
+#block-views-recent-portfolio-items-block .views-field-field-image img, 
+input[type=text], input[type=password] {
+  width: 100%;
+}
+
+.view-blog-page-view .field-type-image img {
+  width: 100%;
+}
+
+
+.username-wrapper,
+.post-time-node,
+.comments-amount {
+  display: block;
+  font-family: "Open Sans";
+  color:  #3d666f;
+  font-size: 16px;
+  font-style: italic;
+  line-height: 22px;
+  border: none;
+  padding-left: 24px;
+  padding-bottom: 2px;
+  }
+
+.node nav {
+  display: none;
+}
+
+.view-blog-page-view .views-row {
+  padding-bottom: 0px;
+  margin-bottom: 30px;
+}
+
+.view-blog-page-view .views-row.views-row-last {
+  margin-bottom: 0;
+}
+
+body #page a, 
+body #page .content ul li  {
+  font-size: 16px;
+}
+
+body #page p {
+  line-height: 24px;
+}
+
+#columns #block-views-front-carousel-block{
+  margin-top: -1px;
+}
+
+.page-portfolio .view.view-id-portfolio_page .views-row {
+  width: 100%;
+  margin: 0 0 20px 0;
+}
+
+.page-portfolio .view.view-id-portfolio_page .view-content {
+  margin-right: 0;
+}
+
+#page #columns #main-content, #footer .region, #footer .region-inner, .sidebar .region-inner {
+  margin: 0 10px;
+}
+
+/* Menu Styling */
+
+
+#block-superfish-1 {
+  z-index: 1;
+}
+
+#page #menu-bar #block-superfish-1 h2.block-title, #block-system-main-menu h2.block-title {
+  margin: 0;
+}
+
+#page #menu-bar #block-superfish-1 h2.block-title a, #block-system-main-menu h2.block-title a {
+  color: #fff;
+  float: right;
+  background: url(/corporate_profile/sites/all/themes/corporate_theme/images/hamburger-mobile.png) no-repeat;
+  background-position-y: center;
+  font-size: 0;
+  background-position-x: center;
+  border: none;
+  padding: 9px 50px;
+}
+
+#block-superfish-1 ul#superfish-1 li a, #block-superfish-1 ul#superfish-1 > a,
+#block-system-main-menu .menu li a {
+  color: #fff;  
+  font-size: 16px;
+  line-height: 24px; 
+  padding: 6px 0px;
+  border-top: 1px solid #5c5c5c;
+  background: #2e2e2e;
+  width: 100%;
+  border-bottom: none;
+  height: inherit;
+  text-indent: 30px;
+}
+
+#block-superfish-1 ul#superfish-1 li a:hover, #block-superfish-1 ul#superfish-1 > a:hover,
+#block-system-main-menu .menu li a:hover {
+  background: #3b3b3b;
+}
+
+#block-superfish-1 ul#superfish-1 > a, #block-system-main-menu .menu li a {
+  display: inline-block;
+}
+
+#block-superfish-1 ul#superfish-1, #block-system-main-menu ul.menu {
+  display: inline-block !important;
+  width: 100%;
+}
+
+#page #menu-bar #block-superfish-1 .at-menu-toggle-button, #block-system-main-menu .at-menu-toggle-button {
+  height: 40px;
+}
+
+#block-superfish-1 ul#superfish-1 form {
+  position: relative;
+}
+
+#block-superfish-1 ul#superfish-1 form input[type=search] {
+  width: 100%;
+  height: 39px;
+  border: none;
+  border-top: 1px solid #5c5c5c;
+  background: #3b3b3b;
+  border-radius: 0px;
+  padding-left: 30px;
+  color: white;
+  box-sizing: border-box;
+}
+
+#block-superfish-1 ul#superfish-1 form input[type=submit] {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: url(/corporate_profile/sites/all/themes/corporate_theme/images/search_icon_inverted.png) no-repeat center;
+  font-size: 0;
+  height: 42px;
+  width: 50px;
+  border-radius: 0;
+  border: none;
+}
+
+input[type=search]::-webkit-input-placeholder {
+  content: "search";
+  color: #7a7a7a;
+
+}
+
+#tasks ul.primary {
+  white-space: initial;
+}
+
+#block-delta-blocks-breadcrumb {
+  margin-bottom: 15px;
+  margin-left:  10px;
+}
+
+.page-portfolio #page .view.view-portfolio-categories .views-row {
+  width: initial;
+  margin: 0;
+}
+
+.page-portfolio .item-list ul.pager {
+  margin: 15px 0 28px 0;
+  padding: 0;
+  padding-top: 13px;
+}
+
+#page-wrapper #content-column .content-inner {
+  margin-bottom: 0px;
+}
+
+.view.view-id-portfolio_page .view-header .view-portfolio-categories .view-content {
+  margin-right: 0;
+  float: none;
+}
+
+.page-portfolio #content {
+  margin-right: -2%;
+}
+
+.item-list-pager ul.pager {
+  float: none;
+  text-align: left;
+}
+
+.view.view-id-portfolio_page .view-header .view-portfolio-categories {
+  padding: 20px 0;
+}
+
+body #page .view-portfolio-categories .views-row a {
+  font-size: 14px;
+}
+
+}
+@media only screen and (min-width:480px) and (max-width:723px) {
+/*
+ *   Important Information about this CSS File
+ *
+ * - Do not delete or rename this file, if you do not use it leave it blank (delete
+ *   everything) and the file will be skipped when you enable Production Mode in
+ *   the Global theme settings.
+ *
+ * - Read the _README file in this directory, it contains useful help and other information.
+ */
+
+/* Increase the body font size on small touch devices */
+body {
+  font-size: 100%;
+}
+
+h2 {
+  font-size: 22px;
+}
+
+.iframe-wrapper {
+  margin: 0 -20px;
+}
+
+#block-block-4 .block-inner {
+  margin: 0 30px;
+}
+
+
+/* =============================================================================
+ *   Mobile Menu Toggle
+ *   See your theme settings extensions for how to enable the menu toggle.
+ *   These are example styles for the menu toggle menu, you can use these in the
+ *   relevant responsive stylesheets as required. Modify to suit your design.
+ * ========================================================================== */
+/* The toggle link */
+.at-mt .at-menu-toggle h2 {
+  margin-bottom: 5px;
+}
+
+.at-mt .at-menu-toggle h2 a {
+  background: #eee;
+  border: 2px solid #ccc;
+  padding: 2px 10px;
+}
+
+/* Menu items */
+.at-mt .at-menu-toggle ul.menu li a {
+  background: #eee;
+  border-bottom: 1px solid #fff;
+}
+
+header {
+  display: none;
+}
+
+#menu-bar {
+  margin-bottom: 0;
+}
+
+#block-superfish-1 select {
+  -webkit-appearance: none;
+  border: none;
+  width: 140px;
+  height: 40px;
+  float: right;
+  color: #fff; 
+  background:url(/corporate_profile/sites/all/themes/corporate_theme/images/menu_line.png) no-repeat;
+  background-position-y:center;
+  text-align: right;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+}
+
+/* Footer Styling */
+
+
+footer .block {
+  padding: 17px 0 15px;
+}
+
+footer .block .content {
+  padding-top: 10px;
+}
+
+footer .block a, p {
+  font-size: 16px;
+}
+
+footer#footer .block h2 {
+  font-size: 22px;
+  margin: 0.3em 0;
+}
+
+footer .block + .block {
+  border-top: 8px solid #727272;
+}
+
+footer #block-block-4 {
+  border-top: none;
+}
+
+footer .block-inner {
+  margin: 0;
+}
+
+#block-views-recent-blog-posts-block .field-content {
+  font-size: 14px;
+}
+
+#block-views-recent-blog-posts-block .content img:hover {
+  border-color: #525252;
+}
+
+footer #block-block-2 .content {
+  padding-top: 0;
+}
+
+#columns #block-views-partners-carousel-block .owl-buttons {
+  display: none;
+}
+
+#columns #block-views-partners-carousel-block {
+  margin: 20px 0;
+}
+
+
+#columns #block-views-recent-articles-block .views-field-view-node {
+  display: none;
+}
+
+#block-block-5 div.column {
+  display: block;
+  vertical-align: top;
+  margin: 0 auto;
+}
+
+#block-block-4 span {
+  margin: 0;
+}
+
+#block-block-4 .footer-line {
+  font-size: 14px;
+  margin: 0;
+  display: inline;
+}
+
+#block-block-4 #footer-dash {
+  display: inline;
+}
+
+.page-node-142 #columns .content-inner {
+  width: initial;
+}
+
+iframe {
+  width: 100%;
+  height: 436px;
+}
+
+#node-142 .contact-column {
+  width: 100%;
+}
+
+.contact-column strong {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+.contact-column ul li {
+  font-size: 16px; 
+  font-weight: 400;
+  line-height: 24px;  
+}
+
+.region-sidebar-first,
+.region-sidebar-second {
+  box-shadow: none;
+}
+
+#columns .region-sidebar-first section,
+#columns .region-sidebar-second section {
+  margin: 0;
+  width: initial;
+  border-top: 1px solid #c6d0d1;
+}
+
+#block-system-main #node-140.node-page {
+  margin: 0;
+}
+
+header {
+  display: block;
+}
+
+header#header .region-header {
+  display: none;
+}
+
+#block-views-recent-portfolio-items-block .views-field-field-image img,
+input[type=text], input[type=password]  {
+  width: 100%;
+}
+
+#block-views-front-carousel-block, #block-views-testimonials-block {
+  width: auto;
+}
+
+#columns #block-views-front-carousel-block{
+  margin-top: -1px;
+}
+
+/* Page Portfolio Styling */
+
+.page-portfolio .view.view-id-portfolio_page .views-row {
+  float: left;
+  margin: 1%;
+  width: 48%;
+}
+}
+@media only screen and (min-width:724px) and (max-width:999px) {
+/*
+ *   Important Information about this CSS File
+ *
+ * - Do not delete or rename this file, if you do not use it leave it blank (delete
+ *   everything) and the file will be skipped when you enable Production Mode in
+ *   the Global theme settings.
+ *
+ * - Read the _README file in this directory, it contains useful help and other information.
+ */
+
+/* Increase the default font size on small touch devices */
+body {
+  font-size: 100%;
+}
+
+#footer .region-inner {
+  margin: 0 20px;
+}
+
+#block-block-4 .block-inner {
+  margin: 0 30px;
+}
+
+/* =============================================================================
+ *   Mobile Menu Toggle
+ *   See your theme settings extensions for how to enable the menu toggle.
+ *   These are example styles for the menu toggle menu, you can use these in the
+ *   relevant responsive stylesheets as required. Modify to suit your design.
+ * ========================================================================== */
+/* The toggle link */
+.at-mt .at-menu-toggle h2 {
+  margin-bottom: 5px;
+}
+
+.at-mt .at-menu-toggle h2 a {
+  background: #eee;
+  border: 2px solid #ccc;
+  padding: 2px 10px;
+}
+
+/* Menu items */
+.at-mt .at-menu-toggle ul.menu li a {
+  background: #eee;
+  border-bottom: 1px solid #fff;
+}
+
+#block-block-1, #block-block-2, #block-views-recent-blog-posts-block, #block-superfish-2 {
+  margin: 0;
+}
+
+#columns #block-views-front-carousel-block {
+  margin: 0px -30px;
+}
+
+#columns #block-views-front-carousel-block .owl-page {
+  background: url(/corporate_profile/sites/all/themes/corporate_theme/images/Ellipse-active-tablet.png);
+  width: 26px;
+  height: 26px;
+}
+
+#columns #block-views-front-carousel-block .owl-theme .owl-controls {
+  width: 20%;
+}
+
+#columns #block-views-front-carousel-block .owl-theme .owl-controls .owl-page + .owl-page {
+  margin-left: 4%;
+}
+
+#columns #block-views-front-carousel-block .owl-theme .owl-controls .owl-page span {
+  display: block;
+  width: 16px;
+  height: 16px;
+  margin: 5px 5px;
+  opacity: 0.0;
+  background: #fff;
+}
+
+#columns #block-views-front-carousel-block .owl-theme .owl-controls .owl-page span:hover {
+  opacity: 0.15;
+}
+
+#columns #block-views-front-carousel-block .owl-theme .owl-controls .active span {
+  opacity: 1.0;
+}
+
+#columns #block-views-partners-carousel-block .owl-buttons {
+  display: none;
+}
+
+#columns #block-views-partners-carousel-block {
+  margin: 20px 0px;
+
+}
+
+#columns #block-views-partners-carousel-block img {
+  width: 100%;
+}
+
+#block-views-partners-carousel-block .owl-wrapper {
+  margin-left: -10px;
+}
+
+#block-views-partners-carousel-block .owl-wrapper-outer {
+  margin: 0;
+}
+
+#columns #block-views-recent-articles-block .views-field-view-node {
+  display: none;
+}
+
+#block-views-partners-carousel-block .owl-controls .owl-page,
+#block-views-recent-articles-block .owl-controls .owl-page {
+  background: rgba(198, 208, 209, 0.4);
+  border-radius: 50%;
+  width: 19px;
+  height: 19px;
+}
+
+#block-views-partners-carousel-block .owl-controls .owl-page span,
+#block-views-recent-articles-block .owl-controls .owl-page span {
+  width: 13px;
+  height: 13px;
+  margin: 3px 3px;  
+  background: #fff;
+  opacity: 1;
+}
+
+#block-views-partners-carousel-block .owl-controls .owl-page span:hover,
+#block-views-recent-articles-block .owl-controls .owl-page span:hover {
+  background: #fff;
+  opacity: 0.5;
+}
+
+#block-views-partners-carousel-block .owl-controls .owl-page.active span,
+#block-views-recent-articles-block .owl-controls .owl-page.active span {
+  background: #c6d0d1;
+}
+
+#block-views-partners-carousel-block .owl-controls .owl-page + .owl-page,
+#block-views-recent-articles-block .owl-controls .owl-page + .owl-page {
+  margin-left: 10px;
+}
+
+
+
+footer .block {
+  padding: 17px 0 15px;
+}
+
+footer .block .content {
+  padding-top: 10px;
+}
+
+footer .block a, p {
+  font-size: 13px;
+}
+
+footer#footer .block h2 {
+  font-size: 22px;
+  margin: 0.3em 0;
+}
+
+footer .block + .block {
+  border-top: 8px solid #727272;
+}
+  
+footer .block-inner {
+  margin: 0;
+}
+
+#block-block-2 .content li {
+  margin: 0;
+  float: left;
+  border: none;
+  width: 25%;
+}
+
+#superfish-2, #block-views-recent-blog-posts-block .content,
+#block-block-1 .content, #block-block-2 .content {
+  width: 100%;
+}
+
+#block-views-recent-blog-posts-block .field-content {
+  font-size: 14px;
+}
+
+#block-views-recent-blog-posts-block .content img:hover {
+  border-color: #525252;
+}
+
+footer #block-block-2 .content {
+  padding-top: 0;
+}
+
+
+#block-block-5 {
+  margin: 30px 0px;
+}
+
+#block-block-5 div.column {
+  width: 32%;
+}
+
+#block-block-5 strong {
+  position: absolute;
+  top: -60px;
+  left: 46px;
+  height: 36px;
+  width: 36px;
+}
+
+#block-block-4 span {
+  font-size: 13px;
+}
+
+#block-block-2 .content ul li {
+  text-align: center;
+}
+
+#block-block-2 .content ul li:first-child {
+  text-align: left;
+}
+
+#block-block-2 .content ul li:last-child {
+  text-align: right
+}
+
+
+/* HEADER STYLING */
+
+header#header {
+  margin: 15px 30px;
+  margin-top: 0;
+  padding-top: 16px;
+}
+
+#branding {
+  margin: 0;
+  float: left;
+}
+
+#block-search-form, #block-logintoboggan-logintoboggan-logged-in {
+  display: none;
+}
+
+.region-header {
+  float: right;
+}
+
+#block-block-3 .block-inner {
+  margin: 0;
+}
+
+#block-block-3 {
+  margin-top: 10px;
+}
+
+.logged-in #block-block-3 ul #phone-icon {
+  padding-right: 0;
+}
+
+.not-logged-in .region-sidebar-second #user-login {
+  display: none;
+}
+  
+.page-node-142 header .region-inner {
+  margin: 0;
+}
+
+.page-node-142 #block-webform-client-block-131 {
+  padding: 20px 0;
+}
+
+.page-node-142 .region-footer {
+  margin: 0;
+}
+
+.page-node-142 iframe {
+  width: 100%;
+}
+
+#node-142 {
+  border-top: 1px solid #c6d0d1;
+}
+
+#node-142 {
+  padding: 50px 0;
+  padding-top: 0;
+}
+
+#node-142 iframe {
+  height: 426px;
+}
+
+.view-blog-page-view .field-type-image img {
+  width: 100%;
+}
+
+.region-sidebar-first, .region-sidebar-second {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+#main-content .field-name-field-image img {
+  border-radius: 6px;
+  width: 100%;
+}
+
+.page-blog #main-content, .page-node-140 #main-content, .node-type-blog #main-content {
+  -webkit-box-shadow: 30px 0px 86px -60px rgba(0,0,0,0.4);
+  -moz-box-shadow: 30px 0px 86px -60px rgba(0,0,0,0.4);
+  box-shadow: 30px 0px 86px -60px rgba(0,0,0,0.4);
+}
+
+.page-blog #content, .page-node-140 #content, .node-type-blog #content {
+  margin-right: 20px;
+}
+
+#columns .region-sidebar-second section,
+#columns .region-sidebar-first section,
+#columns .region-sidebar-second section img,
+#columns .region-sidebar-first section img {
+  width: 100%;
+  margin: 0;
+  border: none;
+}
+
+#columns .region-sidebar-first section .block-inner { 
+  border-bottom: 1px solid #c6d0d1;
+}
+
+#columns .region-sidebar-first section:last-of-type .block-inner {
+  border: none;
+}
+
+#columns .region-sidebar-second .region-inner section:first-of-type {
+  float: left;
+  width: 48%;
+}
+
+#columns .region-sidebar-second .region-inner section:last-of-type {
+  float: right;
+  width: 48%;
+}
+
+#columns .region-sidebar-second .region-inner section input[type=text],
+#columns .region-sidebar-second .region-inner section input[type=password] {
+  width: 100%;
+}
+
+.logged-in #columns .region-sidebar-second section#block-views-comments-recent-block {
+  float: none;
+  width: 100%;
+}
+
+section#block-views-comments-recent-block .views-field-timestamp .field-content {
+  font-size: 13px;
+}
+
+#block-views-recent-articles-block {
+  margin-top: 55px;
+}
+
+body #columns #block-views-partners-carousel-block {
+  margin: 0;
+}
+
+#comment-form input[type=text], #comment-form input[type=textarea] {
+  width: 100%;
+}
+
+/* Page Portfolio Styling */
+
+.page-portfolio .view.view-id-portfolio_page .view-header + .view-content .views-row {
+  float: left;
+  width: 31%;
+}
+
+#columns .region-sidebar-first,
+#columns .region-sidebar-second {
+  padding: 0;
+}
+
+/* MENU STYLING */
+
+#block-superfish-1 {
+  z-index: 1;
+}
+
+#page #menu-bar #block-superfish-1 h2.block-title, #block-system-main-menu h2.block-title {
+  margin: 0;
+}
+
+#page #menu-bar #block-superfish-1 h2.block-title a, #block-system-main-menu h2.block-title a {
+  color: #fff;
+  float: right;
+  background: url(/corporate_profile/sites/all/themes/corporate_theme/images/hamburger-mobile.png) no-repeat;
+  background-position-y: center;
+  font-size: 0;
+  background-position-x: center;
+  border: none;
+  padding: 9px 50px;
+}
+
+#block-superfish-1 ul#superfish-1 li a, #block-superfish-1 ul#superfish-1 > a,
+#block-system-main-menu ul.menu li a {
+  color: #fff;  
+  font-size: 16px;
+  line-height: 24px; 
+  padding: 6px 0px;
+  border-top: 1px solid #5c5c5c;
+  background: #2e2e2e;
+  width: 100%;
+  border-bottom: none;
+  height: inherit;
+  text-indent: 30px;
+}
+
+#block-superfish-1 ul#superfish-1 li a:hover, #block-superfish-1 ul#superfish-1 > a:hover,
+#block-system-main-menu .menu li a:hover {
+  background: #3b3b3b;
+}
+
+#block-superfish-1 ul#superfish-1 > a, #block-system-main-menu ul.menu li a {
+  display: inline-block;
+}
+
+#block-superfish-1 ul#superfish-1, #block-system-main-menu ul.menu {
+  display: inline-block !important;
+  width: 100%;
+}
+
+#page #menu-bar #block-superfish-1 .at-menu-toggle-button, #block-system-main-menu .at-menu-toggle-button {
+  height: 40px;
+}
+
+#block-superfish-1 ul#superfish-1 form {
+  position: relative;
+}
+
+#block-superfish-1 ul#superfish-1 form input[type=search] {
+  width: 100%;
+  height: 39px;
+  border: none;
+  border-top: 1px solid #5c5c5c;
+  background: #3b3b3b;
+  border-radius: 0px;
+  padding-left: 30px;
+  color: white;
+  box-sizing: border-box;
+}
+
+#block-superfish-1 ul#superfish-1 form input[type=submit] {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: url(/corporate_profile/sites/all/themes/corporate_theme/images/search_icon_inverted.png) no-repeat center;
+  font-size: 0;
+  height: 42px;
+  width: 50px;
+  border-radius: 0;
+  border: none;
+}
+
+input[type=search]::-webkit-input-placeholder {
+  content: "search";
+  color: #7a7a7a;
+
+}
+
+#tasks ul.primary {
+  white-space: initial;
+}
+
+#block-delta-blocks-breadcrumb {
+  margin: 0px 20px;
+}
+
+.region-sidebar-first .region-inner {
+  margin-right: 20px;
+}
+
+.region-sidebar-second .region-inner {
+  margin: 0 20px;
+}
+}
+@media only screen and (min-width:999px) and (max-width:999px) {
+/*
+ *   Important Information about this CSS File
+ *
+ * - Do not delete or rename this file, if you do not use it leave it blank (delete
+ *   everything) and the file will be skipped when you enable Production Mode in
+ *   the Global theme settings.
+ *
+ * - Read the _README file in this directory, it contains useful help and other information.
+ */
+
+/* Increase the body font size on tablet devices */
+body {
+  font-size: 93.8%;
+}
+
+#columns #block-views-front-carousel-block {
+  margin: 0px;
+}
+
+}
+@media only screen and (min-width:1000px) {
+/*
+ *   Important Information about this CSS File
+ *
+ * - Do not delete or rename this file, if you do not use it leave it blank (delete
+ *   everything) and the file will be skipped when you enable Production Mode in
+ *   the Global theme settings.
+ *
+ * - Read the _README file in this directory, it contains useful help and other information.
+ */
+
+footer .region-inner {
+  margin: 0 20px;
+}
+
+#block-block-4 .block-inner {
+  margin: 0 30px;
+}
+
+#block-block-2 .content li {
+  margin: 0;
+  background: url(/corporate_profile/sites/all/themes/corporate_theme/images/line.png) bottom no-repeat;
+  background-position-x: 40px;  
+  border: none;
+}
+
+.region-inner #block-superfish-1 {
+  margin: 0;
+  margin-top: 20px;
+}
+
+footer .region-inner {
+  padding: 10px 0 50px;
+}
+
+#block-webform-client-block-131 {
+  width: 300px;
+}
+
+#columns {
+  padding: 20px 0;
+}
+
+/* Home Page Articles Block */
+
+
+#block-block-5 .column {
+  width: 33.07%;
+}
+
+#block-block-5 .column p {
+  margin-bottom: 0;
+}
+
+/* Footer */
+
+#footer .block {
+  margin: 0;
+  width: 25%;
+  float: left;
+}
+
+#block-block-4 {
+  background-color:  #0f0f0f;
+  box-shadow: 0px -1px 0px 0.00px #000000;
+  height: 46px;
+  margin-bottom: 0px;
+}
+
+#columns #block-views-front-carousel-block {
+  margin: -20px -30px 0;
+}
+
+#block-views-front-carousel-block .owl-controls .owl-page {
+  width: 16px;
+  height: 16px;
+  background: url(/corporate_profile/sites/all/themes/corporate_theme/images/Ellipse-active.png);
+}
+
+#block-views-front-carousel-block .owl-controls .owl-page span {
+  width: 8px;
+  height: 8px;
+  margin: 4px 4px;  
+  background: #fff;
+  opacity: 1;
+}
+
+#block-views-front-carousel-block .owl-controls .owl-page span:hover {
+  background: #fff;
+  opacity: 0.5;
+}
+
+#block-views-front-carousel-block .owl-controls .owl-page.active span {
+  opacity: 0;
+}
+
+#block-views-front-carousel-block .owl-controls .owl-page + .owl-page {
+  margin-left: 10px;
+}
+
+#block-views-partners-carousel-block .owl-wrapper-outer {
+  padding-left: -15%;
+}
+
+#block-views-partners-carousel-block .owl-pagination {
+  display: none;
+}
+
+
+
+/* HEADER STYLING */ 
+
+header {
+  margin: 25px 30px;
+  margin-top: 0;
+}
+
+header .region-header {
+  float: right;
+}
+
+header#header {
+  height: 90px;
+}
+
+#branding {
+  margin: 0;
+  margin-top: 40px;
+  float: left;
+}
+
+#block-block-3, #block-logintoboggan-logintoboggan-logged-in {
+  float: right;
+  margin: 0;
+  margin-top: 20px;
+}
+
+#block-search-form {
+  clear: right;
+  float: right;
+  margin: 0;
+  margin-top: 20px;
+}
+
+.logged-in #phone-icon {
+  padding-right: 0;
+}
+  
+#block-views-recent-articles-block .views-field {
+  width: 100%;
+  height: auto;
+}
+
+#block-views-recent-articles-block .owl-item {
+  padding: 0 2px;
+}
+
+#block-views-recent-articles-block .owl-wrapper-outer {
+  margin: 0 -2px;
+}
+
+#block-views-recent-articles-block .views-field-body {
+  width: 220px;
+}
+
+
+/* CONTACTS PAGE */
+
+#block-webform-client-block-131 {
+  width: 460px;
+  float: left;
+}
+
+#block-webform-client-block-131 .webform-component--name{
+  float: left;
+}
+
+#block-webform-client-block-131 .webform-component--e-mail {
+  float: right;
+}
+
+#block-webform-client-block-131 .form-actions {
+  float: right;
+}
+
+#node-142 {
+  width: 460px;
+  float: right;
+  margin-bottom: 150px;
+}
+
+#left-contact {
+  float: left;
+}
+
+#right-contact {
+  float: right;
+}
+
+.page-node-142 #columns .block {
+  margin: 0;
+}
+
+#block-webform-client-block-131 .webform-component--name input,
+#block-webform-client-block-131 .webform-component--e-mail input {
+  width: 220px;
+}
+
+#block-webform-client-block-131 .webform-component--subject {
+  clear: both;
+}
+
+#block-user-login input[type=text], #block-user-login input[type=password] {
+  width: 200px;
+}
+
+/* Page Portfolio */
+
+
+#columns .region-sidebar-first, #columns .region-sidebar-second {
+  width: 200px;
+  padding: 0 20px;
+}
+}
